@@ -98,7 +98,10 @@ Steps to 'Pull':
 
   ```
         > git push origin
- 
+  ```
+  
+  d. If you see the following warning message, respond to it so it won't annoy you again. 
+  ```
         warning: push.default is unset; its implicit value has changed in
         Git 2.0 from 'matching' to 'simple'. To squelch this message
         and maintain the traditional behavior, use:
@@ -120,7 +123,10 @@ Steps to 'Pull':
         (the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
         'current' instead of 'simple' if you sometimes use older versions of Git)
   ```
-
+  e. Respond as follows. A nice explanation for this has been provided [here](http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0). 
+  ```
+        > git config --global push.default simple
+  ```
 15. You know your changes have been 'pushed' when you see the following lines inyour Unix window
     ```
     Counting objects: 4, done.
@@ -131,16 +137,22 @@ Steps to 'Pull':
     To https://github.com/emm13/deconstructSigs.git
     221f5b1..949f8d1  master -> master
     ```
-    
-16. Check on your online Git repository for the changes you have committed via Unix. (Mine had - hooray!)
+   
+16. If you haven't added or commited any changes, you will get the following message
+  ```
+      > git push origin
+        Everything up-to-date
+  ```
 
-17. Now you are ready to raise a _Pull Request_ with the authors of _dconstructSigs_ by clicking on the 'Pull Request' button on the top right corner of your [page](https://github.com/emm13/deconstructSigs).
+17. Check on your online Git repository for the changes you have committed via Unix. (Mine had - hooray!)
 
-18. You will be asked to write a few words explaining what the changes you propose are. Good to be as informative as you can in this section and respectful as it isn't your blood, sweat and tears behind the code. 
+18. Now you are ready to raise a _Pull Request_ with the authors of _dconstructSigs_ by clicking on the 'Pull Request' button on the top right corner of your [page](https://github.com/emm13/deconstructSigs).
 
-19. Now you will have to wait until the authors get back to you on whether or not they want to incorporate your suggestions into their code. 
+19. You will be asked to write a few words explaining what the changes you propose are. It pays to be as informative as you can in this section for your own future reference. Also, be respectful as it isn't your blood, sweat and tears behind the code. 
 
-20. Pull Request Done!
+20. Now you will have to wait until the authors get back to you on whether or not they want to incorporate your suggestions into their code. 
+
+21. Pull Request Done!
 
 
 
