@@ -91,9 +91,8 @@ Steps to 'Pull':
         origin  https://github.com/emm13/deconstructSigs.git (push)
   ```
   <br \>  c. Then run the _push_ command
-  
-  <br \>
-        ```
+
+  ```
         > git push origin
  
         warning: push.default is unset; its implicit value has changed in
@@ -131,6 +130,14 @@ Steps to 'Pull':
     
 16. Check on your online Git repository for the changes you have committed via Unix. (Mine had - hooray!)
 
-17. 
+17. Now you are ready to raise a _Pull Request_ with the authors of _dconstructSigs_ by clicking on the 'Pull Request' button on the top right corner of your [page](https://github.com/emm13/deconstructSigs).
+
+18. You will be asked to write a few words explaining what the changes you propose are. Good to be as informative as you can in this section and respectful as it isn't your blood, sweat and tears behind the code. 
+
+19. Now you will have to wait until the authors get back to you on whether or not they want to incorporate your suggestions into their code. 
+
+20. Pull Request Done!
+
+
 
 
