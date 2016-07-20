@@ -11,9 +11,9 @@ Solution :
 ----------
 I rewrote the function _'muts.to.sigs.input'_ to accept the genome annotation package (BSGenome from Bioconductor) as a parameter therefore making it more flexible for old data. 
 
-Use for Git :
+Why use Git ? :
 --------------
-I wanted to create a 'Pull Request' for the code which meant contacting the author of deconstructSigs to read my suggestions and think about incorporating it into his publically available code. I didn't even know it was called a 'pull' request when I started. [This](http://kbroman.org/github_tutorial/pages/fork.html) page I found was very helpful.
+The code for _deconstructSigs_ in on a Git repository so I thought I'd use Git to incoporate my changes. I wanted to create a 'Pull Request' for the code which meant contacting the author of _deconstructSigs_ to read my suggestions and think about incorporating it into his publically available code. I didn't even know it was called a 'pull' request when I started. [This](http://kbroman.org/github_tutorial/pages/fork.html) page I found was very helpful.
 
 Steps to 'Pull':
 ----------------
@@ -77,8 +77,8 @@ Steps to 'Pull':
         (use "git reset HEAD <file>..." to unstage)
         modified:   mut.to.sigs.input.R (colour green)
   ```    
-  
 13. Now commit changes to your local repository which will register your changes as part of YOUR _'deconstructSigs'_ package at YOUR Unix profile location. You have to use the *-m* option to provide an explanation of the change you have made. This is compulsary. 
+  
   ```
       > git commit mut.to.sigs.input.R -m "Adding parameter 'bsg' to make code accessible to earlier genome builds such as hg18"
         [master 0e7d870] Added options for pushing directly from Unix
@@ -91,44 +91,15 @@ Steps to 'Pull':
 14. Finally, you need to sync/publish the changes you have made to the code on your local Unix profile to that on your online Git repository (mine is https://github.com/emm13). 
   <br \>  a. You will have to use the command 'push' to achieve this
   <br \>  b. You need to tell your computer where on the interwebs to 'push' your code to. Of course, you want it back on your Git repository. You can get a link to your repository by using the 'remote' command. The parameter 'origin' is a short-hand for your Git repository as it was the 'origin' of the code. 
+  
   ``` 
       > git remote -v
         origin  https://github.com/emm13/deconstructSigs.git (fetch)
         origin  https://github.com/emm13/deconstructSigs.git (push)
   ```
-  
   c. Then run the _push_ command
-
   ```
       > git push origin
-  ```
-  
-  d. If you see the following warning message, respond to it so it won't annoy you again. 
-  ```
-      warning: push.default is unset; its implicit value has changed in
-      Git 2.0 from 'matching' to 'simple'. To squelch this message
-      and maintain the traditional behavior, use:
-
-      git config --global push.default matching
-
-      To squelch this message and adopt the new behavior now, use:
-
-      git config --global push.default simple
-
-      When push.default is set to 'matching', git will push local branches
-      to the remote branches that already exist with the same name.
-
-      Since Git 2.0, Git defaults to the more conservative 'simple'
-      behavior, which only pushes the current branch to the corresponding
-      remote branch that 'git pull' uses to update the current branch.
-
-      See 'git help config' and search for 'push.default' for further information.
-      (the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
-      'current' instead of 'simple' if you sometimes use older versions of Git)
-  ```
-  e. Respond as follows. A nice explanation for this has been provided [here](http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0). 
-  ```
-      > git config --global push.default simple
   ```
 15. You know your changes have been 'pushed' when you see the following lines inyour Unix window
   ```
@@ -157,6 +128,68 @@ Steps to 'Pull':
 
 21. Pull Request Done!
 
+Additional tips and tricks
+--------------------------
+####A. Setting defaults : 
+   If you see the following warning message, respond to it so it won't annoy you again. 
+  
+  ```
+    warning: push.default is unset; its implicit value has changed in
+    Git 2.0 from 'matching' to 'simple'. To squelch this message
+    and maintain the traditional behavior, use:
 
+    git config --global push.default matching
 
+    To squelch this message and adopt the new behavior now, use:
+
+    git config --global push.default simple
+
+    When push.default is set to 'matching', git will push local branches
+    to the remote branches that already exist with the same name.
+
+    Since Git 2.0, Git defaults to the more conservative 'simple'
+    behavior, which only pushes the current branch to the corresponding
+    remote branch that 'git pull' uses to update the current branch.
+
+    See 'git help config' and search for 'push.default' for further information.
+    (the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+    'current' instead of 'simple' if you sometimes use older versions of Git)
+  ```
+  
+  Respond as follows. A nice explanation for this has been provided [here](http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0). 
+  
+  ```
+    > git config --global push.default simple
+  ```
+  
+####B. Working on online and local version at the same time - yikes :
+  If you are trying to push a change from your Unix repository to your online Git repository and you have been making edits at both ends, expect to see the following error.
+
+```
+    > git push origin
+    To https://github.com/emm13/01_GitPull.git
+    ! [rejected]        master -> master (fetch first)
+     error: failed to push some refs to 'https://github.com/emm13/01_GitPull.git'
+    hint: Updates were rejected because the remote contains work that you do
+    hint: not have locally. This is usually caused by another repository pushing
+    hint: to the same ref. You may want to first integrate the remote changes
+    hint: (e.g., 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+  
+  To resolve this, _pull_ the online version to your local repository first and then push your local changed. DON'T FORGET TO COMMIT YOUR ONLINE CHANGES as you will lose them if you don't. 
+  
+```
+    > git pull origin master
+    remote: Counting objects: 21, done.
+    remote: Compressing objects: 100% (21/21), done.
+    remote: Total 21 (delta 7), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (21/21), done.
+    From https://github.com/emm13/01_GitPull
+    * branch            master     -> FETCH_HEAD
+    63dc53f..314133c  master     -> origin/master
+    Merge made by the 'recursive' strategy.
+    README.md | 111 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++------------------------------------------------
+    1 file changed, 63 insertions(+), 48 deletions(-)
+```
 
