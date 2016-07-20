@@ -1,4 +1,4 @@
-# Pulling a Git Request for Dummies like Me
+# Pulling a Git Request for Dummies
 
 This is for novice Git users like myself. This document describes my very first interaction with Git. Hope you find it useful. 
 Having said I'm a novice, learning to use Git makes more sense when you have a particular task at hand than if you were just running through the 'how-to' guide
