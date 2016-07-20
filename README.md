@@ -97,7 +97,7 @@ Steps to 'Pull':
         origin  https://github.com/emm13/deconstructSigs.git (fetch)
         origin  https://github.com/emm13/deconstructSigs.git (push)
   ```
-  c. Then run the _push_ command
+  c. Then run the _push_ command. You will be prompted for your online username and password so be ready to type them in.
   ```
       > git push origin
   ```
