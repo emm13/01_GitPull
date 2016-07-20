@@ -24,7 +24,7 @@ Steps to 'Pull':
 
 2. Log into your GitHub page using the credentials you created above
 
-3. Click the ![Cat Silhouette](\\emea.astrazeneca.net\UK\Alderley Park\Users 08\kwjs952\Documents\Oncotrack\R-packages\GitHub-Mark) icon in the top left-hand corner of your page which will bring up a GitHub search bar. Since I am interested in _'deconstructSigs'_, I type that in and it brings up the page https://github.com/raerose01/deconstructSigs.
+3. Click the Cat Silhouette icon in the topleft corner of your page which will bring up a GitHub search bar. Since I am interested in _'deconstructSigs'_, I type that in and it brings up the page https://github.com/raerose01/deconstructSigs.
 
 4. In the topright corner of the [deconstructSigs](https://github.com/raerose01/deconstructSigs) page, you will see a 'Fork' button and if you hover over it, the button says 'Fork your own copy of https://github.com/raerose01/deconstructSigs to your account'. Click it as this makes a local copy of the code for deconstructSigs in your Git repository.
 
@@ -34,25 +34,25 @@ Steps to 'Pull':
 
 7. Let's assume you have Git installed. I have to type 'module load git' to initiate git on my Unix terminal. If you have to do this, then do so. Else continue. The _git_ command lists all the functions you can use to work with git and a short explanation. For a more detailed explanation of any command, use -help as always
   ```
-    > module load git
-    > git
-    > git add -help
+      > module load git
+      > git
+      > git add -help
   ```
 
 8. Create a directory for all your Git-work which won't interfere with any other code/programs/talks etc that you work on. Keep it clean and only use it for Git. Change directory into this location
   ```
-    > cd 01_Code/Git/
+      > cd 01_Code/Git/
   ```
 
 9. The first step is to copy the copy (yes, recursive) of 'deconstructSigs' on your profile on Github to your local profile on Unix. You need to use the command 'clone' to copy as shown below. 
   ```  
-  > git clone https://github.com/emm13/deconstructSigs.git
+      > git clone https://github.com/emm13/deconstructSigs.git
   ```    
 
 10. Check the status of all your code at this starting point by using the 'status' command
   ```
-   > git status
-     Output:
+      > git status
+        Output:
         On branch master
         Your branch is up-to-date with 'origin/master'.
         
@@ -68,8 +68,8 @@ Steps to 'Pull':
 
 12. Use the command 'add' to add changes to your local Git repository and check the status of your file
   ```  
-  > git add mut.to.sigs.input.R
-  > git status
+      > git add mut.to.sigs.input.R
+      > git status
         On branch master
         Your branch is up-to-date with 'origin/master'.
         
@@ -80,16 +80,19 @@ Steps to 'Pull':
   
 13. Now commit changes to your local repository which will register your changes as part of YOUR _'deconstructSigs'_ package at YOUR Unix profile location. You have to use the *-m* option to provide an explanation of the change you have made. This is compulsary. 
   ```
-    > git commit mut.to.sigs.input.R -m "Adding parameter 'bsg' to make code accessible to earlier genome builds such as hg18"
+      > git commit mut.to.sigs.input.R -m "Adding parameter 'bsg' to make code accessible to earlier genome builds such as hg18"
+        [master 0e7d870] Added options for pushing directly from Unix
+        1 file changed, 44 insertions(+), 10 deletions(-)
+      > git status
+        On branch master
+        Your branch is ahead of 'origin/master' by 1 commit.
+        (use "git push" to publish your local commits)
   ```  
-14. Finally, you need to sync the changes you have made to the code on your local Unix profile to that on your online Git repository (mine is https://github.com/emm13). 
-  
+14. Finally, you need to sync/publish the changes you have made to the code on your local Unix profile to that on your online Git repository (mine is https://github.com/emm13). 
   <br \>  a. You will have to use the command 'push' to achieve this
-  
   <br \>  b. You need to tell your computer where on the interwebs to 'push' your code to. Of course, you want it back on your Git repository. You can get a link to your repository by using the 'remote' command. The parameter 'origin' is a short-hand for your Git repository as it was the 'origin' of the code. 
- 
   ``` 
-        > git remote -v
+      > git remote -v
         origin  https://github.com/emm13/deconstructSigs.git (fetch)
         origin  https://github.com/emm13/deconstructSigs.git (push)
   ```
@@ -97,50 +100,62 @@ Steps to 'Pull':
   c. Then run the _push_ command
 
   ```
-        > git push origin
- 
-        warning: push.default is unset; its implicit value has changed in
-        Git 2.0 from 'matching' to 'simple'. To squelch this message
-        and maintain the traditional behavior, use:
+      > git push origin
+  ```
+  
+  d. If you see the following warning message, respond to it so it won't annoy you again. 
+  ```
+      warning: push.default is unset; its implicit value has changed in
+      Git 2.0 from 'matching' to 'simple'. To squelch this message
+      and maintain the traditional behavior, use:
 
-        git config --global push.default matching
+      git config --global push.default matching
 
-        To squelch this message and adopt the new behavior now, use:
+      To squelch this message and adopt the new behavior now, use:
 
-        git config --global push.default simple
+      git config --global push.default simple
 
-        When push.default is set to 'matching', git will push local branches
-        to the remote branches that already exist with the same name.
+      When push.default is set to 'matching', git will push local branches
+      to the remote branches that already exist with the same name.
 
-        Since Git 2.0, Git defaults to the more conservative 'simple'
-        behavior, which only pushes the current branch to the corresponding
-        remote branch that 'git pull' uses to update the current branch.
+      Since Git 2.0, Git defaults to the more conservative 'simple'
+      behavior, which only pushes the current branch to the corresponding
+      remote branch that 'git pull' uses to update the current branch.
 
-        See 'git help config' and search for 'push.default' for further information.
-        (the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
-        'current' instead of 'simple' if you sometimes use older versions of Git)
+      See 'git help config' and search for 'push.default' for further information.
+      (the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+      'current' instead of 'simple' if you sometimes use older versions of Git)
+  ```
+  e. Respond as follows. A nice explanation for this has been provided [here](http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0). 
+  ```
+      > git config --global push.default simple
+  ```
+15. You know your changes have been 'pushed' when you see the following lines inyour Unix window
+  ```
+      Counting objects: 4, done.
+      Delta compression using up to 8 threads.
+      Compressing objects: 100% (4/4), done.
+      Writing objects: 100% (4/4), 730 bytes | 0 bytes/s, done.
+      Total 4 (delta 3), reused 0 (delta 0)
+      To https://github.com/emm13/deconstructSigs.git
+      221f5b1..949f8d1  master -> master
+  ```
+   
+16. If you haven't added or commited any changes, you will get the following message
+  ```
+      > git push origin
+        Everything up-to-date
   ```
 
-15. You know your changes have been 'pushed' when you see the following lines inyour Unix window
-    ```
-    Counting objects: 4, done.
-    Delta compression using up to 8 threads.
-    Compressing objects: 100% (4/4), done.
-    Writing objects: 100% (4/4), 730 bytes | 0 bytes/s, done.
-    Total 4 (delta 3), reused 0 (delta 0)
-    To https://github.com/emm13/deconstructSigs.git
-    221f5b1..949f8d1  master -> master
-    ```
-    
-16. Check on your online Git repository for the changes you have committed via Unix. (Mine had - hooray!)
+17. Check on your online Git repository for the changes you have committed via Unix. (Mine had - hooray!)
 
-17. Now you are ready to raise a _Pull Request_ with the authors of _dconstructSigs_ by clicking on the 'Pull Request' button on the top right corner of your [page](https://github.com/emm13/deconstructSigs).
+18. Now you are ready to raise a _Pull Request_ with the authors of _dconstructSigs_ by clicking on the 'Pull Request' button on the topright corner of your [page](https://github.com/emm13/deconstructSigs).
 
-18. You will be asked to write a few words explaining what the changes you propose are. Good to be as informative as you can in this section and respectful as it isn't your blood, sweat and tears behind the code. 
+19. You will be asked to write a few words explaining what the changes you propose are. It pays to be as informative as you can in this section for your own future reference. Also, be respectful as it isn't your blood, sweat and tears behind the code. 
 
-19. Now you will have to wait until the authors get back to you on whether or not they want to incorporate your suggestions into their code. 
+20. Now you will have to wait until the authors get back to you on whether or not they want to incorporate your suggestions into their code. 
 
-20. Pull Request Done!
+21. Pull Request Done!
 
 
 
