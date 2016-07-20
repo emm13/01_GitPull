@@ -131,7 +131,7 @@ Steps to 'Pull':
       > git config --global push.default simple
   ```
 15. You know your changes have been 'pushed' when you see the following lines inyour Unix window
-    ```
+  ```
       Counting objects: 4, done.
       Delta compression using up to 8 threads.
       Compressing objects: 100% (4/4), done.
@@ -139,7 +139,7 @@ Steps to 'Pull':
       Total 4 (delta 3), reused 0 (delta 0)
       To https://github.com/emm13/deconstructSigs.git
       221f5b1..949f8d1  master -> master
-    ```
+  ```
    
 16. If you haven't added or commited any changes, you will get the following message
   ```
