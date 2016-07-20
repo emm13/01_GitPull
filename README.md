@@ -1,11 +1,11 @@
-# Pulling a Git Request for Dummies like Me
+# Pulling a Git Request for Dummies
 
 This is for novice Git users like myself. This document describes my very first interaction with Git. Hope you find it useful. 
-Having said I'm a novice, learning to use Git makes more sense when you have a particular task at hand than if you were just running through the 'how-to' guide
+Having said I'm a novice, learning to use Git makes more sense when you have a particular task at hand than if you were just running through the 'how-to' guide so find yourself a task....
 
 Problem :
 ---------
-I was using package _'deconstructSigs'_ on genomic data analysed using hg18 genome build. Package function _'muts.to.sigs.input'_ is hard-coded to function on hg19 build genome data only. 
+I am using package _'deconstructSigs'_ on genomic data analysed using hg18 genome build. Package function _'muts.to.sigs.input'_ is hard-coded to function on hg19 build genome data. 
 
 Solution : 
 ----------
@@ -13,10 +13,10 @@ I rewrote the function _'muts.to.sigs.input'_ to accept the genome annotation pa
 
 Why use Git ? :
 --------------
-The code for _deconstructSigs_ in on a Git repository so I thought I'd use Git to incoporate my changes. I wanted to create a 'Pull Request' for the code which meant contacting the author of _deconstructSigs_ to read my suggestions and think about incorporating it into his publically available code. I didn't even know it was called a 'pull' request when I started. [This](http://kbroman.org/github_tutorial/pages/fork.html) page I found was very helpful.
+The code for _deconstructSigs_ in on a Git repository so I thought I'd use Git to incoporate my changes. I wanted to create a 'Pull Request' for the code which meant contacting the author of _deconstructSigs_ to read my suggestions and think about incorporating it into his publically available code. I didn't even know it was called a 'pull' request when I started.  [This](http://kbroman.org/github_tutorial/pages/fork.html) page I found was very helpful in teaching me.
 
-Steps to 'Pull':
-----------------
+Steps to 'Pull' a request:
+----------------------------
 1. Create a GitHub account for yourself at the following webpage https://github.com/
   <br/>- Create a username : Mine is Emm13
   <br/>- Provide an email address : blah@gmail.com
@@ -26,7 +26,7 @@ Steps to 'Pull':
 
 3. Click the Cat Silhouette icon in the topleft corner of your page which will bring up a GitHub search bar. Since I am interested in _'deconstructSigs'_, I type that in and it brings up the page https://github.com/raerose01/deconstructSigs.
 
-4. In the topright corner of the [deconstructSigs](https://github.com/raerose01/deconstructSigs) page, you will see a 'Fork' button and if you hover over it, the button says 'Fork your own copy of https://github.com/raerose01/deconstructSigs to your account'. Click it as this makes a local copy of the code for deconstructSigs in your Git repository.
+4. In the topright corner of the [deconstructSigs](https://github.com/raerose01/deconstructSigs) page, you will see a 'Fork' button and if you hover over it, the button says 'Fork your own copy of https://github.com/raerose01/deconstructSigs to your account'. Click it as this makes a local copy of the code for deconstructSigs in your Git repository. If you click the Cat icon again, you should see a copy of this on your GitHub profile page.
 
 5. Now you can tinker with the copy of _deconstructSigs_ to your heart's content and the author won't bat an eyelid as his copy remains unaffected. I did my 'tinkering' on a Unix-based form of Git. Here's how. 
 
@@ -192,4 +192,14 @@ Additional tips and tricks
     README.md | 111 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++------------------------------------------------
     1 file changed, 63 insertions(+), 48 deletions(-)
 ```
-
+  You can now push your local changes and you shouldn't see any error messages.
+```
+    > git push origin
+    Counting objects: 7, done.
+    Delta compression using up to 8 threads.
+    Compressing objects: 100% (7/7), done.
+    Writing objects: 100% (7/7), 1.88 KiB | 0 bytes/s, done.
+    Total 7 (delta 0), reused 0 (delta 0)
+    To https://github.com/emm13/01_GitPull.git
+      02f3d95..244fa2b  master -> master
+```
