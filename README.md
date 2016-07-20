@@ -24,7 +24,7 @@ Steps to 'Pull':
 
 2. Log into your GitHub page using the credentials you created above
 
-3. Click the Cat Silhouette icon in the top left-hand corner of your page which will bring up a GitHub search bar. Since I am interested in _'deconstructSigs'_, I type that in and it brings up the page https://github.com/raerose01/deconstructSigs.
+3. Click the Cat Silhouette icon in the topleft corner of your page which will bring up a GitHub search bar. Since I am interested in _'deconstructSigs'_, I type that in and it brings up the page https://github.com/raerose01/deconstructSigs.
 
 4. In the topright corner of the [deconstructSigs](https://github.com/raerose01/deconstructSigs) page, you will see a 'Fork' button and if you hover over it, the button says 'Fork your own copy of https://github.com/raerose01/deconstructSigs to your account'. Click it as this makes a local copy of the code for deconstructSigs in your Git repository.
 
@@ -146,7 +146,7 @@ Steps to 'Pull':
 
 17. Check on your online Git repository for the changes you have committed via Unix. (Mine had - hooray!)
 
-18. Now you are ready to raise a _Pull Request_ with the authors of _dconstructSigs_ by clicking on the 'Pull Request' button on the top right corner of your [page](https://github.com/emm13/deconstructSigs).
+18. Now you are ready to raise a _Pull Request_ with the authors of _dconstructSigs_ by clicking on the 'Pull Request' button on the topright corner of your [page](https://github.com/emm13/deconstructSigs).
 
 19. You will be asked to write a few words explaining what the changes you propose are. It pays to be as informative as you can in this section for your own future reference. Also, be respectful as it isn't your blood, sweat and tears behind the code. 
 
