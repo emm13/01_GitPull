@@ -192,4 +192,14 @@ Additional tips and tricks
     README.md | 111 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++------------------------------------------------
     1 file changed, 63 insertions(+), 48 deletions(-)
 ```
-
+  You can now push your local changes and you shouldn't see any error messages.
+```
+    > git push origin
+    Counting objects: 7, done.
+    Delta compression using up to 8 threads.
+    Compressing objects: 100% (7/7), done.
+    Writing objects: 100% (7/7), 1.88 KiB | 0 bytes/s, done.
+    Total 7 (delta 0), reused 0 (delta 0)
+    To https://github.com/emm13/01_GitPull.git
+      02f3d95..244fa2b  master -> master
+```
