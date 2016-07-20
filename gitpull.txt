@@ -1,5 +1,3 @@
-#gitpull.txt
-
 # Commands to initiate a pull request for another's code on Git
   ```
     # Load Git on Unix terminal
