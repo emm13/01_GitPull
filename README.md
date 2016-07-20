@@ -24,7 +24,7 @@ Steps to 'Pull':
 
 2. Log into your GitHub page using the credentials you created above
 
-3. Click the ![Cat Silhouette](\\emea.astrazeneca.net\UK\Alderley Park\Users 08\kwjs952\Documents\Oncotrack\R-packages\GitHub-Mark) icon in the top left-hand corner of your page which will bring up a GitHub search bar. Since I am interested in _'deconstructSigs'_, I type that in and it brings up the page https://github.com/raerose01/deconstructSigs.
+3. Click the Cat Silhouette icon in the top left-hand corner of your page which will bring up a GitHub search bar. Since I am interested in _'deconstructSigs'_, I type that in and it brings up the page https://github.com/raerose01/deconstructSigs.
 
 4. In the topright corner of the [deconstructSigs](https://github.com/raerose01/deconstructSigs) page, you will see a 'Fork' button and if you hover over it, the button says 'Fork your own copy of https://github.com/raerose01/deconstructSigs to your account'. Click it as this makes a local copy of the code for deconstructSigs in your Git repository.
 
