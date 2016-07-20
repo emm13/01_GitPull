@@ -81,8 +81,16 @@ Steps to 'Pull':
 13. Now commit changes to your local repository which will register your changes as part of YOUR _'deconstructSigs'_ package at YOUR Unix profile location. You have to use the *-m* option to provide an explanation of the change you have made. This is compulsary. 
   ```
     > git commit mut.to.sigs.input.R -m "Adding parameter 'bsg' to make code accessible to earlier genome builds such as hg18"
+    
+      [master 0e7d870] Added options for pushing directly from Unix
+      1 file changed, 44 insertions(+), 10 deletions(-)
+  
+    > git status
+    On branch master
+    Your branch is ahead of 'origin/master' by 1 commit.
+    (use "git push" to publish your local commits)
   ```  
-14. Finally, you need to sync the changes you have made to the code on your local Unix profile to that on your online Git repository (mine is https://github.com/emm13). 
+14. Finally, you need to sync/publish the changes you have made to the code on your local Unix profile to that on your online Git repository (mine is https://github.com/emm13). 
   
   <br \>  a. You will have to use the command 'push' to achieve this
   
