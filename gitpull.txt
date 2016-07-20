@@ -1,0 +1,36 @@
+#gitpull.txt
+
+# Commands to initiate a pull request for another's code on Git
+  ```
+    # Load Git on Unix terminal
+    > module load git
+    > git
+    
+    # Ask for help on commands such as 'add' and 'push'
+    > git add -help
+    > git push -help
+    
+    # Change into working directory
+    > cd 01_Code/Git/
+    
+    # Copy code from your online repository to local Unix repository
+    > git clone https://github.com/emm13/deconstructSigs.git
+    
+    # Add your modified code to the repository
+    > git add mut.to.sigs.input.R
+    
+    # Check the status of your repository now that a file has been added
+    > git status
+    
+    # Commit your changes to your local repository with an explanation of the change
+    > git commit mut.to.sigs.input.R -m "Adding parameter 'bsg' to make code accessible to earlier genome builds such as hg18"
+    
+    # Synchronise the changes from your local Git repository to your online Git Repository
+    # Remote gives you the online location as well as acronym you can use to make life easier.
+    # _origin_ is the acronym in the example below and the link is to my online repository
+    # example : origin https://github.com/emm13/deconstructSigs.git 
+    
+    > git remote -v
+    > git push origin
+    
+    ```
