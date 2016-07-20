@@ -1,4 +1,4 @@
-# gitpull.txt
+# Pulling a Git Request for Dummies like Me
 
 This is for novice Git users like myself. This document describes my very first interaction with Git. Hope you find it useful. 
 Having said I'm a novice, learning to use Git makes more sense when you have a particular task at hand than if you were just running through the 'how-to' guide
@@ -83,14 +83,18 @@ Steps to 'Pull':
     > git commit mut.to.sigs.input.R -m "Adding parameter 'bsg' to make code accessible to earlier genome builds such as hg18"
   ```  
 14. Finally, you need to sync the changes you have made to the code on your local Unix profile to that on your online Git repository (mine is https://github.com/emm13). 
+  
   <br \>  a. You will have to use the command 'push' to achieve this
+  
   <br \>  b. You need to tell your computer where on the interwebs to 'push' your code to. Of course, you want it back on your Git repository. You can get a link to your repository by using the 'remote' command. The parameter 'origin' is a short-hand for your Git repository as it was the 'origin' of the code. 
-  ```
+ 
+  ``` 
         > git remote -v
         origin  https://github.com/emm13/deconstructSigs.git (fetch)
         origin  https://github.com/emm13/deconstructSigs.git (push)
   ```
-  <br \>  c. Then run the _push_ command
+  
+  c. Then run the _push_ command
 
   ```
         > git push origin
@@ -115,7 +119,7 @@ Steps to 'Pull':
         See 'git help config' and search for 'push.default' for further information.
         (the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
         'current' instead of 'simple' if you sometimes use older versions of Git)
-        ```
+  ```
 
 15. You know your changes have been 'pushed' when you see the following lines inyour Unix window
     ```
