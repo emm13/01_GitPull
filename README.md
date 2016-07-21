@@ -180,7 +180,7 @@ Additional tips and tricks
   To resolve this, _pull_ the online version to your local repository first and then push your local changed. DON'T FORGET TO COMMIT YOUR ONLINE CHANGES as you will lose them if you don't. 
   
 ```
-    > git pull origin master
+    > git pull master origin
     remote: Counting objects: 21, done.
     remote: Compressing objects: 100% (21/21), done.
     remote: Total 21 (delta 7), reused 0 (delta 0), pack-reused 0
