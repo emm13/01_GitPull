@@ -60,7 +60,7 @@
 # 2. Initiate a pull request directly from Unix
 
     # Push your local changes onto your online repository
-    > git push master
+    > git push
 
     # 1. Online pull request
     # The rest of the steps, 15-20 are available at https://github.com/emm13/01_GitPull/blob/master/README.md
