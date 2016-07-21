@@ -55,14 +55,15 @@
     # origin  https://github.com/emm13/01_GitPull.git (fetch)
     # origin  https://github.com/emm13/01_GitPull.git (push)
 
-# Here you have two options :
-# 1. Sync your changes to your online repository and initiate a pull request online
+# Sync your changes to your online repository and
+# 1. Initiate a pull request online
 # 2. Initiate a pull request directly from Unix
 
+    # Push your local changes onto your online repository
+    > git push master
+
     # 1. Online pull request
-    # Synchronise the changes from your local Git repository to your online Git Repository by using push
     # The rest of the steps, 15-20 are available at https://github.com/emm13/01_GitPull/blob/master/README.md
-    > git push origin
     
     # 2. Local pull request
-    > git pull-request master origin/master
+    > git request-pull master https://github.com/emm13/01_GitPull
