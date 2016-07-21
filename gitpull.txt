@@ -65,6 +65,4 @@
     > git push origin
     
     # 2. Local pull request
-    > git pull-request origin https://github.com/emm13/01_GitPull
-
-    # Output looks like this
+    > git pull-request master origin/master
